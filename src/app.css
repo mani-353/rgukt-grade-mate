@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.select-text {
+    color: rgb(15, 155, 242);
+    text-shadow: 1px 1px 2px black;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.dark-mode {
+    background-image: url('/pic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.mouse {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.light-mode {
+    background-image: url('/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.shiny-text {
+    color: gold;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+.text {
+    color: rgb(240, 86, 25);
+    text-shadow: 1px 1px 2px black;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.subject-hover {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.subject-hover:hover,
+.subject-hover:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #f979f9;
+    transform: scale(1.05);
+}
+
+.subject-hover.clicked {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-group {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* app.css */
+.table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-bordered {
+    border: 1px solid #3c6792;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(207, 197, 197, 0.05);
+}
+
+.form-control {
+    width: 100px;
+    margin: auto;
+}
+
+.text:hover {
+    animation: glow 1s linear infinite alternate;
+}
+
+p.header {
+    animation: glow 1.5s linear infinite alternate;
+    font-size: 40px;
+}
+
+.button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(15, 15, 15);
+    text-shadow: 1px 1px 2px black;
+}
+
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ef62a8, 0 0 40px #d2649b, 0 0 50px #f491c3, 0 0 60px #f074b2, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ac5e85, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #d373a0, 0 0 70px #ef8bbd, 0 0 80px #e42886;
+    }
+}
