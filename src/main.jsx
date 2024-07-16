@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cgpa from './cgpa';
 import Welcome from './welcome';
 import Feedback from './feedback.jsx';
-import NotFound from './NotFound.jsx'; // Ensure the correct filename and path
+import NotFound from './Notfound.jsx'; // Ensure the correct filename and path
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
