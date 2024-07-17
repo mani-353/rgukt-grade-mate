@@ -12,11 +12,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/sgpa/*" element={<App />} />
-        <Route path="/cgpa/*" element={<Cgpa />} />
-        <Route path="/help" element={<Feedback />} />
-        <Route path="*" element={<NotFound />} /> {/* Catch-all route for undefined URLs */}
+        {/* Home route with exact match */}
+        <Route path="/" element={<Welcome />} exact={true} /> {/* Ensures exact match for "/" */}
+
+        {/* Route for "/sgpa" and any subpaths */}
+        <Route path="/sgpa/*" element={<App />} /> {/* Maintains wildcard matching */}
+
+        {/* Route for "/cgpa" and any subpaths */}
+        <Route path="/cgpa/*" element={<Cgpa />} /> {/* Maintains wildcard matching */}
+
+        {/* "help" route with exact match */}
+        <Route path="/help" element={<Feedback />} exact={true} /> {/* Ensures exact match for "/help" */}
+
+        {/* Catch-all route for undefined URLs */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   </React.StrictMode>

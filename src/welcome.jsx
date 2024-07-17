@@ -3,6 +3,7 @@ import '@dotlottie/player-component'; // Import the dotLottie player component
 import './welcome.css';
 import Header from './header';
 import Footer from './footer';
+import { NavLink } from 'react-router-dom';
 
 const Welcome = () => {
     const [darkMode, setDarkMode] = useState(true);
@@ -20,10 +21,23 @@ const Welcome = () => {
                     loopheppu
                     autoplay>
                 </dotlottie-player>
-                <div className="welcome-text">
-                    <h1 className="animated-text">Hi 👋! <span>RGUKTian</span> </h1>
-                    <h2 className="animated-text">Welcome to RGUKT Grade Mate</h2>
-                    <p className='color'>This project helps you calculate your SGPA and CGPA with ease. Select your branch and semester, and enter your grades to get started.</p>
+                <div className='welcome-main'>
+                    <div className="welcome-text">
+                        <h1 className="animated-text">Hi 👋! <span>RGUKTian</span> </h1>
+                        <h2 className="animated-text">Welcome to RGUKT Grade Mate</h2>
+                    </div>
+                    <div>
+                        <p className='color text-center'>This project helps you calculate your SGPA and CGPA with ease. Select your branch and semester, and enter your grades to get started.</p>
+                        <div className="btns">
+                            <NavLink to="/cgpa">
+                                <button className="btn gradient-button mx-2">Calculate CGPA</button>
+                            </NavLink>
+                            <NavLink to="/sgpa">
+                                <button className="btn gradient-button mx-2">Calculate SGPA</button>
+                            </NavLink>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className='about'>

@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="bg-dark text-white py-3 mt-auto">
             <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <div>
-                    <p>&copy; 2024 RGUKT College Grade Calculator. All rights reserved.</p>
+                    <p>&copy; 2024 RGUKT grade mate. All rights reserved.</p>
                     <div className="d-flex justify-content-center">
                         <a href="https://www.linkedin.com/in/veera-manikanta-nandikolla-0b0ba0255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target='_blank' className="text-white mx-2"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/linkedin.png" alt="LinkedIn" /></a>
                         <a href="https://x.com/Nandikolla65209?t=_lAS86KUbpiLtjBKJghdkw&s=09" className="text-white mx-2" target='_blank'><img src="https://img.icons8.com/ios-filled/30/FFFFFF/twitter.png" alt="Twitter" /></a>
@@ -19,18 +19,6 @@ const Footer = () => {
                     <p>Email: n200731@rguktn.ac.in</p>
                     <p>Phone: +91 9063374811</p>
                 </div>
-                {/* <div>
-                    <h5>Feedback</h5>
-                    <form>
-                        <div className="mb-3">
-                            <input type="email" className="form-control" id="feedbackEmail" placeholder="Email address" required />
-                        </div>
-                        <div className="mb-3">
-                            <textarea className="form-control" id="feedbackText" rows="3" placeholder="Feedback" required></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
-                    </form>
-                </div> */}
             </div>
         </footer>
     );

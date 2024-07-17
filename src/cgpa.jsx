@@ -86,7 +86,7 @@ function Cgpa() {
         }));
     };
     const notify = () => {
-        toast.error("Not allowed to enter REM grades");
+        toast.error("No sgpa for remedial subjects");
     }
     const note = () => {
         toast.error("Not allowed to enter SGPA less than 10");
@@ -97,11 +97,13 @@ function Cgpa() {
     const calculateSGPA = () => {
         let totalCredits = 0;
         let totalGradePoints = 0;
+        let remedialSubjectSelected = false;
 
         subjects.forEach((subject, index) => {
             const grade = grades[subject];
             if (grade == 'REM') {
                 notify();
+                remedialSubjectSelected = true;
                 return;
             }
             else {
@@ -111,7 +113,9 @@ function Cgpa() {
                 totalGradePoints += gradeValue * credit;
             }
         });
-
+        if (remedialSubjectSelected) {
+            return;
+        }
         const totalSGPA = totalGradePoints / totalCredits;
         setResult(totalSGPA);
         // Add the SGPA for the current semester to the semesters array
@@ -212,15 +216,15 @@ function Cgpa() {
                         <table className="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Semester</th>
-                                    <th>SGPA</th>
+                                    <th className='text'>Semester</th>
+                                    <th className='text'>SGPA</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {filterSemesters.map((sem) => (
                                     <tr key={sem}>
-                                        <td>{sem.toUpperCase()}</td>
-                                        <td>
+                                        <td className='text'>{sem.toUpperCase()}</td>
+                                        <td className='text'>
                                             <input
                                                 type="number"
                                                 className="form-control"
