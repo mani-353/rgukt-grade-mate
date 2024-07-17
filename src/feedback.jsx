@@ -26,15 +26,15 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: "What is the RGUKT College Grade Calculator?",
-            answer: "The RGUKT College Grade Calculator is a web application that helps students calculate their SGPA, CGPA, and percentages."
+            question: "What is the RGUKT grade mate?",
+            answer: "The RGUKT grade mate is a web application that helps students calculate their SGPA, CGPA, and percentages."
         },
         {
             question: "How does the grade calculation work?",
             answer: "The calculation is based on the input of your grades and credits for each subject. The app uses the formula provided by RGUKT for accurate calculations."
         },
         {
-            question: "Is the RGUKT College Grade Calculator free to use?",
+            question: "Is the RGUKT grade matefree to use?",
             answer: "Yes, the calculator is completely free to use."
         },
         {
@@ -51,7 +51,11 @@ const FAQ = () => {
         },
         {
             question: "Why isn't the SGPA selection showing in CGPA calculation?",
-            answer: "In the RGUKT College Grade Calculator, if you click on the right of the SGPA column in the table, you need to manually input the SGPA value. If you do not click on the table, the semester SGPA is automatically calculated for SGPA calculation."
+            answer: "In the RGUKT grade mate, if you click on the right of the SGPA column in the table, you need to manually input the SGPA value. If you do not click on the table, the semester SGPA is automatically calculated for SGPA calculation."
+        },
+        {
+            "question": "Why is the page so slow to use?",
+            "answer": "The page might be slow because React re-renders the DOM for every change. Optimizing component updates and minimizing unnecessary re-renders can help improve performance."
         }
     ];
 

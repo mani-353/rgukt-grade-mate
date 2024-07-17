@@ -5,6 +5,8 @@ import Footer from './footer';
 import { cse, ece, eee, ce, me, che, mme, puc } from './data';
 import './header.css';
 import './app.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const branchData = {
@@ -36,7 +38,9 @@ function App() {
   const [result, setResult] = useState(0);
   const [darkMode, setDarkMode] = useState(true);
   const [clickedSubject, setClickedSubject] = useState(null);
-  let ele = useRef('');
+  const notify = (message) => {
+    toast.error(message);
+  };
 
   const handleButtonClick = () => {
     if (branch && (year === 'Engineering' ? sem : false)) {
@@ -45,38 +49,41 @@ function App() {
       setSubjects(selectedSubjects);
       setCredits(selectedCredits);
       setGrades({});
-    }
-    else if (year === 'PUC') {
+    } else if (year === 'PUC') {
       const selectedSubjects = puc[branch].subjects;
       const selectedCredits = puc[branch].credits;
       setSubjects(selectedSubjects);
       setCredits(selectedCredits);
       setGrades({});
     } else {
-      alert("Please select year, branch, and semester");
+      notify("Please select year, branch, and semester");
     }
   };
 
   const calculateSGPA = () => {
     let totalCredits = 0;
     let totalGradePoints = 0;
+    let remedialSubjectSelected = false;
+
     subjects.forEach((subject, index) => {
       const grade = grades[subject];
-      if (grade == 'REM') {
-        alert("Not allowed to enter REM grades");
+      if (grade === 'REM') {
+        notify("No sgpa for remedial subjects");
+        remedialSubjectSelected = true;
         return;
       }
-      else {
-        const gradeValue = gradeValues[grade];
-        const credit = credits[index];
-        totalCredits += credit;
-        totalGradePoints += gradeValue * credit;
-      }
+      const gradeValue = gradeValues[grade];
+      const credit = credits[index];
+      totalCredits += credit;
+      totalGradePoints += gradeValue * credit;
     });
+
+    if (remedialSubjectSelected) {
+      return;
+    }
 
     const totalSGPA = totalGradePoints / totalCredits;
     setResult(totalSGPA);
-    ele.current.innerHTML = totalSGPA.toFixed(2);
   };
 
   const handleGradeChange = (subject, grade) => {
@@ -93,10 +100,6 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-  };
-
-  const printResult = () => {
-    window.print();
   };
 
   const handleYearChange = (e) => {
@@ -126,6 +129,18 @@ function App() {
   return (
     <div className={`d-flex mouse flex-column ${darkMode ? 'dark-mode' : 'light-mode'}`} style={{ minHeight: '100vh' }}>
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="container my-5">
         <p className="text-center header shiny-text">RGUKT College Grade Calculator</p>
         <div className="mb-4 row align-items-center justify-content-center">
@@ -204,8 +219,8 @@ function App() {
                   onClick={() => setClickedSubject(clickedSubject === subject ? null : subject)}
                 >
                   <label className="col-sm-4 text text-center">{subject.toUpperCase()}</label>
-                  <div className="col-sm-4">
-                    <select className="form-select select-text text-center" onChange={(e) => handleGradeChange(subject, e.target.value)} required>
+                  <div className="col-sm-10">
+                    <select className="form-select select-text text-center" value={grades[subject] || ''} onChange={(e) => handleGradeChange(subject, e.target.value)} required>
                       <option value="" className='select-text'>Select Grade</option>
                       <option value="EX" className='select-text'>EX</option>
                       <option value="A" className='select-text'>A</option>
@@ -219,18 +234,19 @@ function App() {
                 </div>
               ))}
               <div className="text-center">
-                <button type="submit" className="btn btn-success button mt-3">Submit SGPA</button>
+                <button type="submit" className="btn btn-success button mt-3">Calculate SGPA</button>
               </div>
             </form>
           )}
-          <h1 className="text-center mt-2" ref={ele}></h1>
           {result > 0 && (
-            <div className="mt-4 text-center">
-              <NavLink to="/cgpa">
-                <button className="btn btn-info mx-2">Calculate CGPA</button>
-              </NavLink>
-              <button className="btn btn-warning mx-2" onClick={printResult}>Print Result</button>
-            </div>
+            <>
+              <h1 className="text-center mt-2">{`Your SGPA: ${result.toFixed(2)}`}</h1>
+              <div className="mt-4 text-center">
+                <NavLink to="/cgpa">
+                  <button className="btn btn-info mx-2">Calculate CGPA</button>
+                </NavLink>
+              </div>
+            </>
           )}
         </div>
       </div>
