@@ -1,24 +1,8 @@
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1428328d799c4205132de36533fc3ea0daf7562b
-    "rewrites": [
+     "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/"
         }
     ]
-<<<<<<< HEAD
 }
-=======
-}
-=======
-  "rewrites":[
-    {
-      "source":"/(.*)",
-      "destination":"/"}
-  ]
-}
->>>>>>> 101c075516a41334af958425ae7f7e9796e13ea9
->>>>>>> 1428328d799c4205132de36533fc3ea0daf7562b
