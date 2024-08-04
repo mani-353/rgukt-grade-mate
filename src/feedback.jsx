@@ -3,11 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './header';
 import Footer from './footer';
 import './feedback.css'; // Import the custom CSS file
-<<<<<<< HEAD
-=======
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
->>>>>>> master
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -31,14 +28,11 @@ const FAQ = () => {
 
     const faqs = [
         {
-<<<<<<< HEAD
-=======
             question: "Why are some subjects not included in the SGPA rather than other subjects?",
 
             answer: "This webpage follows the 2020 curriculum of RGUKT only.Only the specific subjects from that SGPA are present."
         },
         {
->>>>>>> master
             question: "What is the RGUKT grade mate?",
             answer: "The RGUKT grade mate is a web application that helps students calculate their SGPA, CGPA, and percentages."
         },
@@ -47,11 +41,7 @@ const FAQ = () => {
             answer: "The calculation is based on the input of your grades and credits for each subject. The app uses the formula provided by RGUKT for accurate calculations."
         },
         {
-<<<<<<< HEAD
-            question: "Is the RGUKT grade matefree to use?",
-=======
             question: "Is the RGUKT grade mate free to use?",
->>>>>>> master
             answer: "Yes, the calculator is completely free to use."
         },
         {
@@ -71,13 +61,8 @@ const FAQ = () => {
             answer: "In the RGUKT grade mate, if you click on the right of the SGPA column in the table, you need to manually input the SGPA value. If you do not click on the table, the semester SGPA is automatically calculated for SGPA calculation."
         },
         {
-<<<<<<< HEAD
-            "question": "Why is the page so slow to use?",
-            "answer": "The page might be slow because React re-renders the DOM for every change. Optimizing component updates and minimizing unnecessary re-renders can help improve performance."
-=======
             question: "Why is the page so slow to use?",
             answer: "The page might be slow because React re-renders the DOM for every change. Optimizing component updates and minimizing unnecessary re-renders can help improve performance."
->>>>>>> master
         }
     ];
 
@@ -99,13 +84,7 @@ const FAQ = () => {
                                     className="btn arrow-button"
                                     type="button"
                                 >
-<<<<<<< HEAD
-                                    <span className="material-symbols-outlined">
-                                        {activeIndex === index ? 'arrow_drop_up' : 'arrow_drop_down'}
-                                    </span>
-=======
                                     <FontAwesomeIcon icon={activeIndex === index ? faChevronUp : faChevronDown} />
->>>>>>> master
                                 </button>
                             </div>
                             <div
