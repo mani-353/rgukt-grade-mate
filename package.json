@@ -11,12 +11,9 @@
   },
   "dependencies": {
     "@dotlottie/player-component": "^2.7.12",
-<<<<<<< HEAD
-=======
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
->>>>>>> master
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

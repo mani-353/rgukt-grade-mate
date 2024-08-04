@@ -178,20 +178,6 @@ p {
     }
 }
 
-<<<<<<< HEAD
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ef62a8, 0 0 40px #d2649b, 0 0 50px #f491c3, 0 0 60px #f074b2, 0 0 70px #e60073;
-    }
-
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ac5e85, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #d373a0, 0 0 70px #ef8bbd, 0 0 80px #e42886;
-    }
-}
-
-h1 span {
-    animation: glow 1.5s linear infinite alternate;
-=======
 
 h1 span {
     text-shadow: 0 0 20px #fff,
@@ -201,14 +187,10 @@ h1 span {
         0 0 60px #d373a0,
         0 0 70px #ef8bbd,
         0 0 80px #e42886;
->>>>>>> master
     font-size: 40px;
 }
 
 .welcome-text h4 {
-<<<<<<< HEAD
-    animation: glow 1.5s linear infinite alternate;
-=======
     text-shadow: 0 0 20px #fff,
         0 0 30px #ac5e85,
         0 0 40px #ff4da6,
@@ -216,7 +198,6 @@ h1 span {
         0 0 60px #d373a0,
         0 0 70px #ef8bbd,
         0 0 80px #e42886;
->>>>>>> master
     font-size: 40px;
     text-align: center;
 }

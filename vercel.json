@@ -1,16 +1,8 @@
 {
-<<<<<<< HEAD
-     "rewrites": [
-=======
     "rewrites": [
->>>>>>> master
         {
             "source": "/(.*)",
             "destination": "/"
         }
     ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-=======
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
->>>>>>> master
 
 .select-text {
     color: rgb(15, 155, 242);
@@ -42,10 +38,6 @@
     text-shadow: 1px 1px 2px black;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 .text {
     color: rgb(240, 86, 25);
     text-shadow: 1px 1px 2px black;
@@ -53,8 +45,6 @@
     font-size: large;
 }
 
-<<<<<<< HEAD
-=======
 .text:hover {
     color: #e42886;
     text-shadow: 0 0 20px #fff, 0 0 30px #ac5e85, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #d373a0, 0 0 70px #ef8bbd, 0 0 80px #e42886;
@@ -66,7 +56,6 @@ p.header {
     font-size: 40px;
 }
 
->>>>>>> master
 .subject-hover {
     border: 1px solid #ccc;
     padding: 10px;
@@ -122,7 +111,6 @@ p.header {
     margin: auto;
 }
 
-<<<<<<< HEAD
 .text:hover {
     animation: glow 1s linear infinite alternate;
 }
@@ -132,15 +120,12 @@ p.header {
     font-size: 40px;
 }
 
-=======
->>>>>>> master
 .button {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
     color: rgb(15, 15, 15);
     text-shadow: 1px 1px 2px black;
-<<<<<<< HEAD
 }
 
 
@@ -153,6 +138,5 @@ p.header {
     to {
         text-shadow: 0 0 20px #fff, 0 0 30px #ac5e85, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #d373a0, 0 0 70px #ef8bbd, 0 0 80px #e42886;
     }
-=======
->>>>>>> master
+
 }
