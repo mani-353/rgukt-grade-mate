@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Body and general styling */
+.style {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Card header and accordion styling */
+.card-header {
+    cursor: pointer;
+}
+
+.arrow-button {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.card-header h5 {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.glow {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ac5e85, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #d373a0, 0 0 70px #ef8bbd, 0 0 80px #e42886;
+    font-size: 40px;
+    text-align: center;
+}
+
+.color {
+    color: #bde4f4;
+}
+
+.feedback-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feedback-form .form-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feedback-form .form-control {
+    font-size: 16px;
+    padding: 12px;
+}
+
+.feedback-form textarea {
+    font-size: 16px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.feedback-form .btn-primary {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin-top: 20px;
+}

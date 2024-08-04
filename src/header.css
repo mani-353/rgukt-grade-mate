@@ -1,0 +1,10 @@
+.nav-link {
+  color: white;
+  /* Default color */
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: gold;
+  /* Highlighted color */
+}
