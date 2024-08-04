@@ -24,6 +24,7 @@
     margin-right: 10px;
 }
 
+<<<<<<< HEAD
 /* Animation */
 @keyframes glow {
     from {
@@ -37,6 +38,10 @@
 
 .glow {
     animation: glow 1.5s linear infinite alternate;
+=======
+.glow {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ac5e85, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #d373a0, 0 0 70px #ef8bbd, 0 0 80px #e42886;
+>>>>>>> master
     font-size: 40px;
     text-align: center;
 }
