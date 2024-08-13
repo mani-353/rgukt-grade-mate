@@ -83,6 +83,6 @@ All credit goes to RGUKT AP for their support and assistance in developing this 
 
 ## Contact
 
-Veera Manikanta Nandikolla - [LinkedIn](www.linkedin.com/in/veera-manikanta-nandikolla-0b0ba0255) - nandikollamanikanta586@gmail.com
+Veera Manikanta Nandikolla - [LinkedIn](https://www.linkedin.com/in/veera-manikanta-nandikolla-0b0ba0255/) - nandikollamanikanta586@gmail.com
 
 Project Link: [https://github.com/mani-353/rgukt-grade-mate](https://github.com/mani-353/rgukt-grade-mate)
